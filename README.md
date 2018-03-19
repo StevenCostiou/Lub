@@ -2,6 +2,6 @@
 
 ```Smalltalk
 Metacello new
-  baseline: 'ReflectivityDev';
+  baseline: 'Lub';
   repository: 'github://StevenCostiou/Lub';
   load
