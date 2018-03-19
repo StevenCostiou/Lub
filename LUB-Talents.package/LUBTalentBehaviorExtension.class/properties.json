@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "StevenCostiou 12/11/2017 21:32",
+	"super" : "LUBTalentInstallerStrategy",
+	"category" : "LUB-Talents",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"originalAst",
+		"injectedAst"
+	],
+	"name" : "LUBTalentBehaviorExtension",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+installing
+adaptationMethodSelectorFor: selector
+	self subclassResponsibility

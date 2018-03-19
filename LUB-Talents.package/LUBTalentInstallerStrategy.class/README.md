@@ -1,0 +1,1 @@
+I am an abstract installing strategy for Talents.

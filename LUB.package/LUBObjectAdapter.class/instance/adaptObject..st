@@ -1,0 +1,3 @@
+adapting
+adaptObject: anObject
+	self subclassResponsibility

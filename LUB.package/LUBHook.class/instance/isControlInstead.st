@@ -1,0 +1,3 @@
+testing
+isControlInstead
+	^control = #instead

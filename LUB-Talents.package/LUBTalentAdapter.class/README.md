@@ -1,0 +1,1 @@
+I am a behavior adapter for objects. I rely on a subset of the Talent technique, implemented with anonymous subclasses. I allow the full LUB implementation (behaviors and states).

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "StevenCostiou 12/11/2017 21:34",
+	"super" : "LUBTalentBehaviorExtension",
+	"category" : "LUB-Talents",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LUBTalentBehaviorExtensionAfter",
+	"type" : "normal"
+}

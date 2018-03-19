@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "StevenCostiou 9/15/2017 10:45",
+	"super" : "Object",
+	"category" : "LUB",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"originalMethod",
+		"replacementMethod",
+		"control",
+		"args"
+	],
+	"name" : "LUBHook",
+	"type" : "normal"
+}

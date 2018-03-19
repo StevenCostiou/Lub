@@ -1,0 +1,3 @@
+actions
+uninstall
+	referenceClass := nil

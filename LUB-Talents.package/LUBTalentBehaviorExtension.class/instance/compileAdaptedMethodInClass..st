@@ -1,0 +1,3 @@
+installing
+compileAdaptedMethodInClass: aClass
+	aClass compile: self generateAdaptedMethodSource

@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "StevenCostiou 12/11/2017 20:45",
+	"super" : "Object",
+	"category" : "LUB",
+	"classinstvars" : [
+		"adaptationTable",
+		"objectAdapterClass"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"referenceClass",
+		"hooks",
+		"states",
+		"objectAdapter"
+	],
+	"name" : "LUBAdaptation",
+	"type" : "normal"
+}

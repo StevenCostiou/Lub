@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "StevenCostiou 12/11/2017 21:52",
+	"super" : "PackageManifest",
+	"category" : "LUB",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ManifestLUB",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+generation
+generateAdaptedMethodSourceExtendedBodyOn: sourceStream methodSignature: methodSignature
+	self subclassResponsibility

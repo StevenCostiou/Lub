@@ -1,0 +1,1 @@
+I just install a new method in an anonymous class. I am used to acquire a new behavior, or to install a method instead of another one in the target object.

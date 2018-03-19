@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "StevenCostiou 12/11/2017 21:31",
+	"super" : "LUBObjectAdapter",
+	"category" : "LUB-Reflectivity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"metalinks"
+	],
+	"name" : "LUBMetalinkAdapter",
+	"type" : "normal"
+}

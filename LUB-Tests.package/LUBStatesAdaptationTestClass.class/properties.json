@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "LUB-Tests-Models",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"state5",
+		"state1",
+		"state21",
+		"state22"
+	],
+	"name" : "LUBStatesAdaptationTestClass",
+	"type" : "normal"
+}

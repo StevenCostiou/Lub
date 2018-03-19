@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "StevenCostiou 12/11/2017 21:32",
+	"super" : "LUBObjectAdapter",
+	"category" : "LUB-Talents",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LUBTalentAdapter",
+	"type" : "normal"
+}

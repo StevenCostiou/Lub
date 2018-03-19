@@ -1,0 +1,3 @@
+testing
+isControlAcquire
+	^control = #acquire

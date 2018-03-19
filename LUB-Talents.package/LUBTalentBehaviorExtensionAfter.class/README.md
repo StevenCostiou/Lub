@@ -1,0 +1,1 @@
+I install a behavior in an anonymous class after the original behavior.
