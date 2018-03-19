@@ -12,4 +12,5 @@ baseline: spec
 			spec package: 'LUB'.
 			spec package: 'LUB-Reflectivity'.
 			spec package: 'LUB-Talents'.
-			spec package: 'LUB-Tests' ]
+			spec package: 'LUB-Tests'.
+			spec postLoadDoIt: #postLoadLubSetup ]
