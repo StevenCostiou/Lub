@@ -1,5 +1,7 @@
 adapting
 unadaptObject: anObject
-	metalinks ifNil: [ ^ self ].
-	(metalinks at: anObject ifAbsent: [ ^ self ]) do: [ :link | link uninstall ].
-	metalinks removeKey: anObject ifAbsent: [  ]
+	| anonClass |
+	anObject isAdapted
+		ifFalse: [ ^ self ].
+	anonClass := anObject class.
+	anObject becomeForward: (anonClass superclass new copyFrom: anObject)

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SpaceTallyItem",
+	"category" : "LUB-Benchmarks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"analyzedClass"
+	],
+	"name" : "LubTallyItem",
+	"type" : "normal"
+}

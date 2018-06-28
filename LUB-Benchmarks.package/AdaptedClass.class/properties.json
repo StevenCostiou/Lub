@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "OriginalClass",
+	"category" : "LUB-Benchmarks-model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"y",
+		"j",
+		"k",
+		"l"
+	],
+	"name" : "AdaptedClass",
+	"type" : "normal"
+}

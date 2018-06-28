@@ -1,0 +1,3 @@
+accessing
+sampling
+	^100
