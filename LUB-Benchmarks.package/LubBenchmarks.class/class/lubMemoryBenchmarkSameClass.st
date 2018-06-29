@@ -7,7 +7,7 @@ lubMemoryBenchmarkSameClass
 		named: 'aName'
 		adapt:
 			{(#m1 -> #instead). (#m2 -> #instead). (#m3 -> #acquire). (#m4 -> #acquire).}
-		with: Cadapt
+		with: (Smalltalk at: #C1)
 		states: #().
 	block := [ | o |
 	o := C new.

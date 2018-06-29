@@ -15,7 +15,7 @@ lubMemoryBenchmarkDifferentClasses
 	instances add: o ].
 	Smalltalk garbageCollect.
 	10 timesRepeat: block.
-	results at: 1 put: (self lubSpaceTallyFor: (instances collect: [ :o | o class ])).
+	results at: 10 put: (self lubSpaceTallyFor: (instances collect: [ :o | o class ])).
 	instances := OrderedCollection new.
 	Smalltalk garbageCollect.
 	100 timesRepeat: block.

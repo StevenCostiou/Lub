@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #'LUB-Benchmarks'!
-SystemOrganization addCategory: 'LUB-Benchmarks-model'!
+SystemOrganization addCategory: #'LUB-Benchmarks-model'!
