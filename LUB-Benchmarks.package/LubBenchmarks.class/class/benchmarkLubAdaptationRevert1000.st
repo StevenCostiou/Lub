@@ -19,9 +19,8 @@ benchmarkLubAdaptationRevert1000
 				states: #().
 			adaptations add: a.
 			o adaptWith: a ].
-	TimeProfiler
-		spyOn: [ 1 to: col size do: [ :i | 
+	TimeProfiler spyOn: [1 to: col size do: [ :i | 
 				| o a |
 				o := col at: i.
 				a := adaptations at: i.
-				o revert: a ] ]
+				o revert: a ]].

@@ -14,4 +14,4 @@ benchmarkLubAdaptationRevert
 		with: Cadapt
 		states: #().
 	col do: [ :o | o adaptWith: a ].
-	TimeProfiler spyOn: [ col do: [ :o | o revert: a ] ]
+	col do: [ :o | o revert: a ]
