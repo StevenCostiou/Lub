@@ -1,0 +1,537 @@
+Total : 10744ms
+Total compilation : 10744ms
+Total migration : 0ms
+
+ - 11486 tallies, 11486 msec.
+
+**Tree**
+--------------------------------
+Process: other processes
+--------------------------------
+5.7% {652ms} WeakArray class>>restartFinalizationProcess
+  5.7% {652ms} WeakArray class>>finalizationProcess
+    3.6% {418ms} primitives
+    2.0% {234ms} WeakArray class>>doOldFinalization
+      2.0% {234ms} Semaphore>>critical:
+        2.0% {234ms} BlockClosure>>ensure:
+          2.0% {234ms} Semaphore>>critical:
+            2.0% {234ms} WeakArray class>>doOldFinalization
+              2.0% {234ms} WeakArray(SequenceableCollection)>>do:
+                2.0% {232ms} WeakArray class>>doOldFinalization
+                  2.0% {232ms} BlockClosure>>on:fork:
+                    2.0% {232ms} BlockClosure>>on:do:
+                      2.0% {232ms} WeakArray class>>doOldFinalization
+                        2.0% {230ms} WeakRegistry>>finalizeValues
+                          2.0% {230ms} WeakRegistry>>protected:
+                            2.0% {230ms} Semaphore>>critical:ifError:
+                              2.0% {230ms} Semaphore>>critical:
+                                2.0% {230ms} BlockClosure>>ensure:
+                                  2.0% {230ms} Semaphore>>critical:
+                                    2.0% {230ms} Semaphore>>critical:ifError:
+                                      2.0% {230ms} BlockClosure>>ifError:
+                                        2.0% {230ms} BlockClosure>>on:do:
+                                          2.0% {230ms} WeakRegistry>>finalizeValues
+                                            2.0% {230ms} WeakIdentityKeyDictionary(WeakKeyDictionary)>>expiredValuesDo:
+                                              1.4% {164ms} primitives
+--------------------------------
+Process: (40s) Morphic UI Process: nil
+--------------------------------
+93.5% {10744ms} LUBAdaptation>>unadaptObject:
+  93.5% {10742ms} LUBMetalinkAdapter>>unadaptObject:
+    93.5% {10742ms} Set>>do:
+      93.5% {10740ms} LUBMetalinkAdapter>>unadaptObject:
+        93.5% {10738ms} MetaLink>>uninstall
+          81.6% {9377ms} MetaLinkInstaller>>uninstallFromAllAnonymousNodes:
+            |67.9% {7799ms} WeakSet>>do:
+            |  |67.9% {7797ms} MetaLinkInstaller>>uninstallFromAllAnonymousNodes:
+            |  |  67.9% {7797ms} IdentitySet(Set)>>do:
+            |  |    67.9% {7797ms} MetaLinkInstaller>>uninstallFromAllAnonymousNodes:
+            |  |      67.9% {7795ms} MetaLinkInstaller>>uninstall:fromNode:forObject:
+            |  |        44.1% {5060ms} MetaLinkInstaller>>uninstallNode:forObject:
+            |  |          |44.0% {5052ms} MetaLinkInstaller>>removeNode:forObject:
+            |  |          |  40.6% {4667ms} MetaLinkAnonymousClassBuilder>>removeMethodNode:fromObject:
+            |  |          |    |40.6% {4658ms} a subclass of C class(ClassDescription)>>removeSelector:
+            |  |          |    |  39.5% {4534ms} SystemAnnouncer>>methodRemoved:protocol:origin:
+            |  |          |    |    39.1% {4493ms} SystemAnnouncer>>announce:
+            |  |          |    |      39.1% {4493ms} SystemAnnouncer(Announcer)>>announce:
+            |  |          |    |        39.1% {4493ms} SubscriptionRegistry>>deliver:
+            |  |          |    |          36.3% {4175ms} SubscriptionRegistry>>deliver:to:
+            |  |          |    |            |36.3% {4175ms} SubscriptionRegistry>>deliver:to:startingAt:
+            |  |          |    |            |  36.3% {4165ms} BlockClosure>>ifCurtailed:
+            |  |          |    |            |    36.3% {4165ms} SubscriptionRegistry>>deliver:to:startingAt:
+            |  |          |    |            |      36.1% {4145ms} WeakAnnouncementSubscription>>deliver:
+            |  |          |    |            |        36.1% {4143ms} BlockClosure>>on:fork:
+            |  |          |    |            |          36.1% {4143ms} BlockClosure>>on:do:
+            |  |          |    |            |            36.1% {4143ms} WeakAnnouncementSubscription>>deliver:
+            |  |          |    |            |              36.1% {4143ms} WeakMessageSend>>cull:cull:
+            |  |          |    |            |                35.8% {4108ms} WeakMessageSend>>cull:
+            |  |          |    |            |                  35.6% {4092ms} WeakMessageSend>>value:
+            |  |          |    |            |                    14.7% {1687ms} EpMonitor>>methodRemoved:
+            |  |          |    |            |                      |14.7% {1687ms} EpMonitor>>handleAnyErrorDuring:
+            |  |          |    |            |                      |  14.7% {1687ms} BlockClosure>>on:do:
+            |  |          |    |            |                      |    14.7% {1687ms} EpMonitor>>methodRemoved:
+            |  |          |    |            |                      |      14.3% {1640ms} CompiledMethod>>asEpiceaRingDefinition
+            |  |          |    |            |                      |        7.5% {865ms} CompiledMethod(CompiledCode)>>timeStamp
+            |  |          |    |            |                      |          |7.5% {865ms} SourceFileArray>>timeStampAt:
+            |  |          |    |            |                      |          |  7.5% {865ms} SourceFileArray>>timeStampAt:for:
+            |  |          |    |            |                      |          |    7.0% {807ms} SourceFileArray>>sourcedDataAt:
+            |  |          |    |            |                      |          |      7.0% {807ms} SourceFileArray>>readStreamAt:ifPresent:ifAbsent:
+            |  |          |    |            |                      |          |        7.0% {807ms} SourceFileArray>>readStreamAtFileIndex:atPosition:ifPresent:ifAbsent:
+            |  |          |    |            |                      |          |          7.0% {805ms} SourceFileArray>>sourcedDataAt:
+            |  |          |    |            |                      |          |            7.0% {805ms} SourceFileArray>>getPreambleFrom:at:
+            |  |          |    |            |                      |          |              5.5% {629ms} primitives
+            |  |          |    |            |                      |          |              1.2% {136ms} SourceFile>>next
+            |  |          |    |            |                      |          |                1.1% {124ms} primitives
+            |  |          |    |            |                      |        6.4% {731ms} CompiledMethod>>sourceCode
+            |  |          |    |            |                      |          6.3% {729ms} CompiledMethod>>getSourceFromFile
+            |  |          |    |            |                      |            6.3% {729ms} BlockClosure>>on:do:
+            |  |          |    |            |                      |              6.3% {729ms} CompiledMethod>>getSourceFromFile
+            |  |          |    |            |                      |                6.3% {727ms} SourceFileArray>>sourceCodeAt:
+            |  |          |    |            |                      |                  6.3% {727ms} SourceFileArray>>readStreamAt:ifPresent:ifAbsent:
+            |  |          |    |            |                      |                    6.3% {727ms} SourceFileArray>>readStreamAtFileIndex:atPosition:ifPresent:ifAbsent:
+            |  |          |    |            |                      |                      5.9% {679ms} SourceFileArray>>createReadOnlyFiles
+            |  |          |    |            |                      |                        5.9% {675ms} SourceFile>>readOnlyCopy
+            |  |          |    |            |                      |                          5.9% {675ms} SourceFile>>tryOpenReadOnly:
+            |  |          |    |            |                      |                            5.5% {630ms} Array(SequenceableCollection)>>do:
+            |  |          |    |            |                      |                              5.5% {626ms} SourceFile>>tryOpenReadOnly:
+            |  |          |    |            |                      |                                5.5% {626ms} BlockClosure>>on:do:
+            |  |          |    |            |                      |                                  5.4% {624ms} SourceFile>>tryOpenReadOnly:
+            |  |          |    |            |                      |                                    4.0% {458ms} FileReference>>readStream
+            |  |          |    |            |                      |                                      4.0% {458ms} FileReference(AbstractFileReference)>>readStreamEncoded:
+            |  |          |    |            |                      |                                        3.3% {380ms} FileReference>>binaryReadStream
+            |  |          |    |            |                      |                                          3.3% {380ms} FileSystem>>binaryReadStreamOn:
+            |  |          |    |            |                      |                                            3.3% {378ms} FileHandle>>binaryReadStream
+            |  |          |    |            |                      |                                              3.2% {370ms} File>>readStream
+            |  |          |    |            |                      |                                                3.2% {370ms} File>>openForRead
+            |  |          |    |            |                      |                                                  3.2% {368ms} File>>openForWrite:
+            |  |          |    |            |                      |                                                    1.7% {196ms} File>>basicOpenForWrite:
+            |  |          |    |            |                      |                                                      |1.7% {196ms} File class>>retryWithGC:until:forFileNamed:
+            |  |          |    |            |                      |                                                      |  1.6% {188ms} File>>basicOpenForWrite:
+            |  |          |    |            |                      |                                                      |    1.2% {143ms} File class>>open:writable:
+            |  |          |    |            |                      |                                                    1.2% {135ms} File>>exists
+            |  |          |    |            |                      |                                                      1.2% {135ms} File>>basicOpenForWrite:
+            |  |          |    |            |                      |                                                        1.2% {135ms} File class>>retryWithGC:until:forFileNamed:
+            |  |          |    |            |                      |                                                          1.1% {132ms} File>>basicOpenForWrite:
+            |  |          |    |            |                      |                                                            1.1% {126ms} File class>>open:writable:
+            |  |          |    |            |                    12.7% {1464ms} MCWorkingCopy class(MCPackageManager class)>>methodRemoved:
+            |  |          |    |            |                      |12.7% {1462ms} MCWorkingCopy class(MCPackageManager class)>>managersForClass:category:do:
+            |  |          |    |            |                      |  12.7% {1462ms} MCWorkingCopy class(MCPackageManager class)>>managersForClass:do:
+            |  |          |    |            |                      |    12.7% {1460ms} Dictionary>>do:
+            |  |          |    |            |                      |      12.7% {1460ms} Dictionary>>valuesDo:
+            |  |          |    |            |                      |        12.6% {1445ms} MCWorkingCopy class(MCPackageManager class)>>managersForClass:do:
+            |  |          |    |            |                      |          9.0% {1037ms} RPackageSet>>includesClass:
+            |  |          |    |            |                      |            |8.2% {947ms} Array(Collection)>>anySatisfy:
+            |  |          |    |            |                      |            |  8.1% {925ms} Array(SequenceableCollection)>>do:
+            |  |          |    |            |                      |            |    7.0% {807ms} Array(Collection)>>anySatisfy:
+            |  |          |    |            |                      |            |      |7.0% {799ms} RPackageSet>>includesClass:
+            |  |          |    |            |                      |            |      |  6.9% {792ms} RPackage>>includesClass:
+            |  |          |    |            |                      |            |      |    6.3% {725ms} RPackage>>includesClassNamed:
+            |  |          |    |            |                      |            |      |      3.7% {421ms} Set>>includes:
+            |  |          |    |            |                      |            |      |        |2.3% {264ms} Set(HashedCollection)>>findElementOrNil:
+            |  |          |    |            |                      |            |      |        |  |2.2% {258ms} Set>>scanFor:
+            |  |          |    |            |                      |            |      |        |  |  1.4% {166ms} ByteSymbol(Symbol)>>=
+            |  |          |    |            |                      |            |      |        |1.4% {157ms} primitives
+            |  |          |    |            |                      |            |      |      2.3% {269ms} ByteString(String)>>asSymbol
+            |  |          |    |            |                      |            |      |        2.3% {267ms} Symbol class>>intern:
+            |  |          |    |            |                      |            |      |          2.3% {265ms} Symbol class>>lookup:
+            |  |          |    |            |                      |            |      |            2.3% {261ms} WeakSet>>like:
+            |  |          |    |            |                      |            |      |              1.5% {174ms} WeakSet>>scanFor:
+            |  |          |    |            |                      |            |      |                1.0% {116ms} ByteSymbol(Symbol)>>=
+            |  |          |    |            |                      |            |    1.0% {118ms} primitives
+            |  |          |    |            |                      |          3.2% {368ms} MCWorkingCopy(MCPackageManager)>>packageSet
+            |  |          |    |            |                      |            2.9% {335ms} MCPackage>>packageSet
+            |  |          |    |            |                      |              2.8% {319ms} RPackageSet class>>named:
+            |  |          |    |            |                      |                2.8% {317ms} RPackageSet class>>basicNamed:
+            |  |          |    |            |                      |                  2.6% {303ms} RPackageSet>>initialize:
+            |  |          |    |            |                      |                    1.5% {169ms} RPackageOrganizer>>packageNamed:ifAbsent:
+            |  |          |    |            |                    3.1% {356ms} ChangesLog>>logMethodRemoved:
+            |  |          |    |            |                      |3.1% {354ms} ChangesLog>>logChange:
+            |  |          |    |            |                      |  1.6% {181ms} SourceFileArray>>forceChangesToDisk
+            |  |          |    |            |                      |    |1.4% {165ms} SourceFile>>tryOpen
+            |  |          |    |            |                      |    |  1.4% {165ms} SourceFile>>tryOpenReadOnly:
+            |  |          |    |            |                      |    |    1.3% {151ms} Array(SequenceableCollection)>>do:
+            |  |          |    |            |                      |    |      1.3% {151ms} SourceFile>>tryOpenReadOnly:
+            |  |          |    |            |                      |    |        1.3% {151ms} BlockClosure>>on:do:
+            |  |          |    |            |                      |    |          1.3% {151ms} SourceFile>>tryOpenReadOnly:
+            |  |          |    |            |                      |  1.4% {165ms} SourceFileArray>>changesWriteStreamDo:
+            |  |          |    |            |                      |    1.2% {143ms} BlockClosure>>ensure:
+            |  |          |    |            |                      |      1.0% {117ms} SourceFileArray>>changesWriteStreamDo:
+            |  |          |    |            |                    1.8% {203ms} ClyNavigationEnvironment>>systemChanged:
+            |  |          |    |            |                      |1.7% {201ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |    |            |                      |  1.7% {201ms} BlockClosure>>ensure:
+            |  |          |    |            |                      |    1.7% {201ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |    |            |                      |      1.7% {201ms} Mutex>>critical:
+            |  |          |    |            |                      |        1.7% {199ms} Semaphore>>critical:
+            |  |          |    |            |                      |          1.7% {199ms} BlockClosure>>ensure:
+            |  |          |    |            |                      |            1.7% {199ms} Semaphore>>critical:
+            |  |          |    |            |                      |              1.7% {199ms} Mutex>>critical:
+            |  |          |    |            |                      |                1.7% {199ms} BlockClosure>>ensure:
+            |  |          |    |            |                      |                  1.7% {199ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |    |            |                      |                    1.7% {199ms} BlockClosure>>ensure:
+            |  |          |    |            |                      |                      1.7% {199ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |    |            |                      |                        1.7% {199ms} BlockClosure>>on:do:
+            |  |          |    |            |                      |                          1.7% {199ms} ClyNavigationEnvironment>>systemChanged:
+            |  |          |    |            |                      |                            1.7% {199ms} ClyNavigationEnvironment>>handleSystemChange:
+            |  |          |    |            |                      |                              1.5% {175ms} Array(SequenceableCollection)>>do:
+            |  |          |    |            |                      |                                1.5% {175ms} ClyNavigationEnvironment>>handleSystemChange:
+            |  |          |    |            |                      |                                  1.5% {171ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+            |  |          |    |            |                      |                                    1.5% {169ms} Mutex>>tryEnterCritical:ifLocked:
+            |  |          |    |            |                      |                                      1.5% {167ms} Semaphore>>critical:ifLocked:
+            |  |          |    |            |                      |                                        1.5% {167ms} Semaphore>>critical:
+            |  |          |    |            |                      |                                          1.5% {167ms} BlockClosure>>ensure:
+            |  |          |    |            |                      |                                            1.5% {167ms} Semaphore>>critical:
+            |  |          |    |            |                      |                                              1.5% {167ms} Mutex>>tryEnterCritical:ifLocked:
+            |  |          |    |            |                      |                                                1.5% {167ms} BlockClosure>>ensure:
+            |  |          |    |            |                      |                                                  1.5% {167ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+            |  |          |    |            |                      |                                                    1.5% {167ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+            |  |          |    |            |                      |                                                      1.5% {167ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+            |  |          |    |            |                      |                                                        1.5% {167ms} Mutex>>critical:
+            |  |          |    |            |                      |                                                          1.4% {165ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+            |  |          |    |            |                      |                                                            1.4% {165ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+            |  |          |    |            |                    1.7% {199ms} ClyInheritanceAnalysisEnvironmentPlugin>>processMethodChange:
+            |  |          |    |            |                      1.5% {170ms} ClyNavigationEnvironment>>systemChanged:
+            |  |          |    |            |                        1.4% {165ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |    |            |                          1.4% {165ms} BlockClosure>>ensure:
+            |  |          |    |            |                            1.4% {165ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |    |            |                              1.4% {165ms} Mutex>>critical:
+            |  |          |    |            |                                1.4% {165ms} Semaphore>>critical:
+            |  |          |    |            |                                  1.4% {163ms} BlockClosure>>ensure:
+            |  |          |    |            |                                    1.4% {163ms} Semaphore>>critical:
+            |  |          |    |            |                                      1.4% {163ms} Mutex>>critical:
+            |  |          |    |            |                                        1.4% {163ms} BlockClosure>>ensure:
+            |  |          |    |            |                                          1.4% {163ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |    |            |                                            1.4% {163ms} BlockClosure>>ensure:
+            |  |          |    |            |                                              1.4% {163ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |    |            |                                                1.4% {161ms} BlockClosure>>on:do:
+            |  |          |    |            |                                                  1.4% {161ms} ClyNavigationEnvironment>>systemChanged:
+            |  |          |    |            |                                                    1.4% {161ms} ClyNavigationEnvironment>>handleSystemChange:
+            |  |          |    |            |                                                      1.3% {151ms} Array(SequenceableCollection)>>do:
+            |  |          |    |            |                                                        1.3% {147ms} ClyNavigationEnvironment>>handleSystemChange:
+            |  |          |    |            |                                                          1.3% {145ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+            |  |          |    |            |                                                            1.2% {140ms} Mutex>>tryEnterCritical:ifLocked:
+            |  |          |    |            |                                                              1.2% {138ms} Semaphore>>critical:ifLocked:
+            |  |          |    |            |                                                                1.2% {138ms} Semaphore>>critical:
+            |  |          |    |            |                                                                  1.2% {138ms} BlockClosure>>ensure:
+            |  |          |    |            |                                                                    1.2% {138ms} Semaphore>>critical:
+            |  |          |    |            |                                                                      1.2% {135ms} Mutex>>tryEnterCritical:ifLocked:
+            |  |          |    |            |                                                                        1.2% {135ms} BlockClosure>>ensure:
+            |  |          |    |            |                                                                          1.1% {131ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+            |  |          |    |            |                                                                            1.1% {131ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+            |  |          |    |            |                                                                              1.1% {131ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+            |  |          |    |            |                                                                                1.1% {129ms} Mutex>>critical:
+            |  |          |    |            |                                                                                  1.1% {129ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+            |  |          |    |            |                                                                                    1.1% {129ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+            |  |          |    |          2.8% {318ms} SubscriptionRegistry>>protected:
+            |  |          |    |            2.8% {318ms} Semaphore>>critical:
+            |  |          |    |              2.8% {318ms} BlockClosure>>ensure:
+            |  |          |    |                2.8% {318ms} Semaphore>>critical:
+            |  |          |    |                  2.8% {318ms} SubscriptionRegistry>>protected:
+            |  |          |    |                    2.8% {318ms} SubscriptionRegistry>>deliver:
+            |  |          |    |                      2.8% {318ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |    |                        2.8% {318ms} Array class(SequenceableCollection class)>>streamContents:
+            |  |          |    |                          2.8% {316ms} Array class(SequenceableCollection class)>>new:streamContents:
+            |  |          |    |                            2.7% {314ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |    |                              2.7% {312ms} IdentitySet(Set)>>do:
+            |  |          |    |                                2.2% {248ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |    |                                  1.7% {201ms} WeakAnnouncementSubscription>>handlesAnnouncement:
+            |  |          |    |                                    1.6% {189ms} ASTCacheReset class(Announcement class)>>handlesAnnouncement:
+            |  |          |    |                                      1.5% {167ms} MethodRemoved class(Behavior)>>inheritsFrom:
+            |  |          |  3.1% {353ms} MetaLinkInstaller>>canRemoveMethodNodeContaining:
+            |  |          |    3.0% {341ms} OrderedCollection(Collection)>>allSatisfy:
+            |  |          |      3.0% {339ms} OrderedCollection>>do:
+            |  |          |        3.0% {339ms} OrderedCollection(Collection)>>allSatisfy:
+            |  |          |          3.0% {339ms} MetaLinkInstaller>>canRemoveMethodNodeContaining:
+            |  |          |            3.0% {339ms} MetaLinkRegistry>>isNodeWithInstanceSpecificLinks:
+            |  |          |              3.0% {339ms} MetaLinkRegistry>>countObjectSpecificLinksIn:
+            |  |          |                3.0% {339ms} OrderedCollection>>select:
+            |  |          |                  3.0% {339ms} MetaLinkRegistry>>countObjectSpecificLinksIn:
+            |  |          |                    3.0% {339ms} MetaLinkRegistry>>isLinkObjectSpecific:
+            |  |          |                      2.8% {317ms} WeakKeyDictionary(Dictionary)>>keys
+            |  |          |                        2.8% {317ms} Array class(SequenceableCollection class)>>new:streamContents:
+            |  |          |                          2.7% {315ms} WeakKeyDictionary(Dictionary)>>keys
+            |  |          |                            2.7% {315ms} WeakKeyDictionary(Dictionary)>>keysDo:
+            |  |          |                              2.7% {315ms} WeakKeyDictionary>>associationsDo:
+            |  |          |                                2.7% {315ms} WeakKeyDictionary(Dictionary)>>associationsDo:
+            |  |          |                                  2.7% {315ms} Array(SequenceableCollection)>>do:
+            |  |          |                                    2.2% {257ms} WeakKeyDictionary(Dictionary)>>associationsDo:
+            |  |          |                                      1.3% {144ms} WeakKeyDictionary>>associationsDo:
+            |  |          |                                        1.0% {117ms} WeakKeyDictionary(Dictionary)>>keysDo:
+            |  |        22.3% {2557ms} RBMethodNode(RBProgramNode)>>removeLink:
+            |  |          |15.9% {1825ms} ReflectiveMethod>>removeLink:
+            |  |          |  |6.9% {790ms} SystemAnnouncer>>announce:
+            |  |          |  |  |6.9% {788ms} SystemAnnouncer(Announcer)>>announce:
+            |  |          |  |  |  6.9% {788ms} SubscriptionRegistry>>deliver:
+            |  |          |  |  |    4.0% {458ms} SubscriptionRegistry>>protected:
+            |  |          |  |  |      |4.0% {456ms} Semaphore>>critical:
+            |  |          |  |  |      |  4.0% {456ms} BlockClosure>>ensure:
+            |  |          |  |  |      |    4.0% {456ms} Semaphore>>critical:
+            |  |          |  |  |      |      3.9% {453ms} SubscriptionRegistry>>protected:
+            |  |          |  |  |      |        3.9% {453ms} SubscriptionRegistry>>deliver:
+            |  |          |  |  |      |          3.9% {453ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |  |  |      |            3.9% {453ms} Array class(SequenceableCollection class)>>streamContents:
+            |  |          |  |  |      |              3.9% {453ms} Array class(SequenceableCollection class)>>new:streamContents:
+            |  |          |  |  |      |                3.9% {453ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |  |  |      |                  3.9% {451ms} IdentitySet(Set)>>do:
+            |  |          |  |  |      |                    3.2% {366ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |  |  |      |                      2.6% {297ms} WeakAnnouncementSubscription>>handlesAnnouncement:
+            |  |          |  |  |      |                        2.5% {285ms} ASTCacheReset class(Announcement class)>>handlesAnnouncement:
+            |  |          |  |  |      |                          2.1% {244ms} MetalinkChanged class(Behavior)>>inheritsFrom:
+            |  |          |  |  |    2.9% {330ms} SubscriptionRegistry>>deliver:to:
+            |  |          |  |  |      2.9% {330ms} SubscriptionRegistry>>deliver:to:startingAt:
+            |  |          |  |  |        2.8% {324ms} BlockClosure>>ifCurtailed:
+            |  |          |  |  |          2.8% {324ms} SubscriptionRegistry>>deliver:to:startingAt:
+            |  |          |  |  |            2.8% {324ms} WeakAnnouncementSubscription>>deliver:
+            |  |          |  |  |              2.8% {324ms} BlockClosure>>on:fork:
+            |  |          |  |  |                2.8% {324ms} BlockClosure>>on:do:
+            |  |          |  |  |                  2.8% {324ms} WeakAnnouncementSubscription>>deliver:
+            |  |          |  |  |                    2.8% {324ms} WeakMessageSend>>cull:cull:
+            |  |          |  |  |                      2.7% {315ms} WeakMessageSend>>cull:
+            |  |          |  |  |                        2.7% {315ms} WeakMessageSend>>value:
+            |  |          |  |  |                          2.7% {310ms} ClyNavigationEnvironment>>systemChanged:
+            |  |          |  |  |                            2.7% {305ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |  |  |                              2.7% {305ms} BlockClosure>>ensure:
+            |  |          |  |  |                                2.7% {305ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |  |  |                                  2.6% {303ms} Mutex>>critical:
+            |  |          |  |  |                                    2.6% {303ms} Semaphore>>critical:
+            |  |          |  |  |                                      2.6% {303ms} BlockClosure>>ensure:
+            |  |          |  |  |                                        2.6% {303ms} Semaphore>>critical:
+            |  |          |  |  |                                          2.6% {301ms} Mutex>>critical:
+            |  |          |  |  |                                            2.6% {301ms} BlockClosure>>ensure:
+            |  |          |  |  |                                              2.6% {301ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |  |  |                                                2.6% {301ms} BlockClosure>>ensure:
+            |  |          |  |  |                                                  2.6% {301ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |  |  |                                                    2.6% {299ms} BlockClosure>>on:do:
+            |  |          |  |  |                                                      2.6% {297ms} ClyNavigationEnvironment>>systemChanged:
+            |  |          |  |  |                                                        2.6% {297ms} ClyNavigationEnvironment>>handleSystemChange:
+            |  |          |  |  |                                                          2.4% {272ms} Array(SequenceableCollection)>>do:
+            |  |          |  |  |                                                            2.4% {272ms} ClyNavigationEnvironment>>handleSystemChange:
+            |  |          |  |  |                                                              2.3% {264ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+            |  |          |  |  |                                                                2.2% {255ms} Mutex>>tryEnterCritical:ifLocked:
+            |  |          |  |  |                                                                  2.2% {255ms} Semaphore>>critical:ifLocked:
+            |  |          |  |  |                                                                    2.2% {255ms} Semaphore>>critical:
+            |  |          |  |  |                                                                      2.2% {255ms} BlockClosure>>ensure:
+            |  |          |  |  |                                                                        2.2% {255ms} Semaphore>>critical:
+            |  |          |  |  |                                                                          2.2% {255ms} Mutex>>tryEnterCritical:ifLocked:
+            |  |          |  |  |                                                                            2.2% {255ms} BlockClosure>>ensure:
+            |  |          |  |  |                                                                              2.2% {251ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+            |  |          |  |  |                                                                                2.2% {251ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+            |  |          |  |  |                                                                                  2.2% {251ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+            |  |          |  |  |                                                                                    2.2% {251ms} Mutex>>critical:
+            |  |          |  |  |                                                                                      2.2% {249ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+            |  |          |  |  |                                                                                        2.1% {246ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+            |  |          |  |  |                                                                                          2.0% {232ms} ClyAllMethodGroups>>isResult:affectedBy:
+            |  |          |  |  |                                                                                            2.0% {230ms} ClyClassSideScope(ClyAbstractClassScope)>>includesMethodGroupsAffectedBy:
+            |  |          |  |  |                                                                                              2.0% {230ms} ClyClassSideScope(ClyAbstractClassScope)>>methodGroupProvidersDo:
+            |  |          |  |  |                                                                                                2.0% {230ms} ClyNavigationEnvironment>>pluginsDo:
+            |  |          |  |  |                                                                                                  2.0% {230ms} OrderedCollection>>do:
+            |  |          |  |  |                                                                                                    2.0% {230ms} ClyClassSideScope(ClyAbstractClassScope)>>methodGroupProvidersDo:
+            |  |          |  |  |                                                                                                      1.9% {220ms} Array(SequenceableCollection)>>do:
+            |  |          |  |  |                                                                                                        1.8% {209ms} ClyClassSideScope(ClyAbstractClassScope)>>includesMethodGroupsAffectedBy:
+            |  |          |  |  |                                                                                                          1.8% {205ms} ClyInheritedMethodGroupProvider(ClySingleMethodGroupProvider)>>providesGroupsAffectedBy:inScope:
+            |  |          |  |  |                                                                                                            1.0% {120ms} ClyDeprecatedMethods(ClyMethodQuery)>>isResult:affectedBy:
+            |  |          |  |5.3% {610ms} ReflectiveMethod>>destroyTwin
+            |  |          |  |  |2.5% {288ms} SystemAnnouncer>>unsubscribe:
+            |  |          |  |  |  |2.5% {288ms} SystemAnnouncer(Announcer)>>unsubscribe:
+            |  |          |  |  |  |  2.5% {286ms} SubscriptionRegistry>>removeSubscriber:
+            |  |          |  |  |  |    2.5% {286ms} SubscriptionRegistry>>protected:
+            |  |          |  |  |  |      2.5% {286ms} Semaphore>>critical:
+            |  |          |  |  |  |        2.5% {286ms} BlockClosure>>ensure:
+            |  |          |  |  |  |          2.5% {286ms} Semaphore>>critical:
+            |  |          |  |  |  |            2.5% {284ms} SubscriptionRegistry>>protected:
+            |  |          |  |  |  |              2.5% {284ms} SubscriptionRegistry>>removeSubscriber:
+            |  |          |  |  |  |                2.5% {284ms} IdentitySet(Collection)>>removeAllSuchThat:
+            |  |          |  |  |  |                  2.5% {284ms} IdentitySet(Set)>>do:
+            |  |          |  |  |  |                    1.9% {216ms} primitives
+            |  |          |  |  |2.0% {224ms} ReflectiveMethod>>recompileAST
+            |  |          |  |  |  1.6% {187ms} RBMethodNode>>generate:
+            |  |          |  |  |    1.1% {121ms} RBMethodNode>>generateIR
+            |  |          |  |3.5% {405ms} CompiledMethod>>invalidate
+            |  |          |  |  3.5% {399ms} ReflectiveMethod>>installReflectiveMethod
+            |  |          |  |    3.5% {399ms} ReflectiveMethod>>installMethod:
+            |  |          |  |      3.4% {395ms} MethodDictionary>>at:put:
+            |  |          |  |        3.4% {395ms} MethodDictionary(HashedCollection)>>fullCheck
+            |  |          |6.1% {700ms} SystemAnnouncer>>announce:
+            |  |          |  6.1% {698ms} SystemAnnouncer(Announcer)>>announce:
+            |  |          |    6.1% {698ms} SubscriptionRegistry>>deliver:
+            |  |          |      4.3% {489ms} SubscriptionRegistry>>protected:
+            |  |          |        |4.3% {489ms} Semaphore>>critical:
+            |  |          |        |  4.3% {489ms} BlockClosure>>ensure:
+            |  |          |        |    4.3% {489ms} Semaphore>>critical:
+            |  |          |        |      4.3% {489ms} SubscriptionRegistry>>protected:
+            |  |          |        |        4.3% {489ms} SubscriptionRegistry>>deliver:
+            |  |          |        |          4.3% {489ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |        |            4.3% {489ms} Array class(SequenceableCollection class)>>streamContents:
+            |  |          |        |              4.3% {489ms} Array class(SequenceableCollection class)>>new:streamContents:
+            |  |          |        |                4.3% {489ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |        |                  4.3% {489ms} IdentitySet(Set)>>do:
+            |  |          |        |                    3.3% {383ms} SubscriptionRegistry>>subscriptionsHandling:
+            |  |          |        |                      2.8% {320ms} WeakAnnouncementSubscription>>handlesAnnouncement:
+            |  |          |        |                        2.7% {305ms} ASTCacheReset class(Announcement class)>>handlesAnnouncement:
+            |  |          |        |                          2.2% {253ms} MetalinkChanged class(Behavior)>>inheritsFrom:
+            |  |          |      1.8% {209ms} SubscriptionRegistry>>deliver:to:
+            |  |          |        1.8% {209ms} SubscriptionRegistry>>deliver:to:startingAt:
+            |  |          |          1.8% {207ms} BlockClosure>>ifCurtailed:
+            |  |          |            1.8% {207ms} SubscriptionRegistry>>deliver:to:startingAt:
+            |  |          |              1.7% {201ms} WeakAnnouncementSubscription>>deliver:
+            |  |          |                1.7% {201ms} BlockClosure>>on:fork:
+            |  |          |                  1.7% {201ms} BlockClosure>>on:do:
+            |  |          |                    1.7% {201ms} WeakAnnouncementSubscription>>deliver:
+            |  |          |                      1.7% {201ms} WeakMessageSend>>cull:cull:
+            |  |          |                        1.7% {197ms} WeakMessageSend>>cull:
+            |  |          |                          1.7% {195ms} WeakMessageSend>>value:
+            |  |          |                            1.7% {191ms} ClyNavigationEnvironment>>systemChanged:
+            |  |          |                              1.7% {191ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |                                1.7% {191ms} BlockClosure>>ensure:
+            |  |          |                                  1.7% {191ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |                                    1.7% {191ms} Mutex>>critical:
+            |  |          |                                      1.7% {191ms} Semaphore>>critical:
+            |  |          |                                        1.7% {191ms} BlockClosure>>ensure:
+            |  |          |                                          1.7% {191ms} Semaphore>>critical:
+            |  |          |                                            1.7% {191ms} Mutex>>critical:
+            |  |          |                                              1.7% {191ms} BlockClosure>>ensure:
+            |  |          |                                                1.6% {189ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |                                                  1.6% {189ms} BlockClosure>>ensure:
+            |  |          |                                                    1.6% {189ms} ClyNavigationEnvironment>>updateUsing:by:
+            |  |          |                                                      1.6% {189ms} BlockClosure>>on:do:
+            |  |          |                                                        1.6% {189ms} ClyNavigationEnvironment>>systemChanged:
+            |  |          |                                                          1.6% {189ms} ClyNavigationEnvironment>>handleSystemChange:
+            |  |          |                                                            1.5% {167ms} Array(SequenceableCollection)>>do:
+            |  |          |                                                              1.5% {167ms} ClyNavigationEnvironment>>handleSystemChange:
+            |  |          |                                                                1.4% {159ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+            |  |          |                                                                  1.3% {147ms} Mutex>>tryEnterCritical:ifLocked:
+            |  |          |                                                                    1.3% {147ms} Semaphore>>critical:ifLocked:
+            |  |          |                                                                      1.3% {147ms} Semaphore>>critical:
+            |  |          |                                                                        1.3% {147ms} BlockClosure>>ensure:
+            |  |          |                                                                          1.3% {147ms} Semaphore>>critical:
+            |  |          |                                                                            1.3% {147ms} Mutex>>tryEnterCritical:ifLocked:
+            |  |          |                                                                              1.3% {147ms} BlockClosure>>ensure:
+            |  |          |                                                                                1.3% {145ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+            |  |          |                                                                                  1.3% {145ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+            |  |          |                                                                                    1.3% {145ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+            |  |          |                                                                                      1.2% {143ms} Mutex>>critical:
+            |  |          |                                                                                        1.2% {141ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+            |  |          |                                                                                          1.2% {141ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+            |  |          |                                                                                            1.1% {122ms} ClyAllMethodGroups>>isResult:affectedBy:
+            |  |          |                                                                                              1.1% {122ms} ClyClassSideScope(ClyAbstractClassScope)>>includesMethodGroupsAffectedBy:
+            |  |          |                                                                                                1.1% {122ms} ClyClassSideScope(ClyAbstractClassScope)>>methodGroupProvidersDo:
+            |  |          |                                                                                                  1.1% {122ms} ClyNavigationEnvironment>>pluginsDo:
+            |  |          |                                                                                                    1.1% {122ms} OrderedCollection>>do:
+            |  |          |                                                                                                      1.1% {122ms} ClyClassSideScope(ClyAbstractClassScope)>>methodGroupProvidersDo:
+            |  |        1.5% {173ms} MetaLinkNodesMapper>>findNodeLike:forObject:
+            |  |          1.5% {173ms} IdentitySet(Collection)>>detect:ifNone:
+            |  |            1.5% {173ms} IdentitySet(Collection)>>detect:ifFound:ifNone:
+            |  |              1.5% {173ms} IdentitySet(Set)>>do:
+            |  |                1.5% {171ms} IdentitySet(Collection)>>detect:ifFound:ifNone:
+            |  |                  1.5% {171ms} MetaLinkNodesMapper>>findNodeLike:forObject:
+            |  |                    1.5% {171ms} RBMethodNode(RBProgramNode)>>isEquivalentTo:
+            |  |                      1.5% {171ms} RBMethodNode>>stop
+            |  |                        1.5% {171ms} RBMethodNode>>newSource
+            |  |                          1.5% {171ms} BlockClosure>>on:do:
+            |  |                            1.5% {171ms} RBMethodNode>>newSource
+            |  |                              1.5% {171ms} RBMethodNode>>reformatSource
+            |  |                                1.5% {167ms} RBParser class>>parseMethod:onError:
+            |13.7% {1576ms} MetaLinkRegistry>>isLinkObjectSpecific:
+            |  12.9% {1480ms} WeakKeyDictionary(Dictionary)>>keys
+            |    12.9% {1480ms} Array class(SequenceableCollection class)>>new:streamContents:
+            |      12.8% {1471ms} WeakKeyDictionary(Dictionary)>>keys
+            |        12.8% {1471ms} WeakKeyDictionary(Dictionary)>>keysDo:
+            |          12.8% {1471ms} WeakKeyDictionary>>associationsDo:
+            |            12.8% {1471ms} WeakKeyDictionary(Dictionary)>>associationsDo:
+            |              12.8% {1469ms} Array(SequenceableCollection)>>do:
+            |                11.0% {1260ms} WeakKeyDictionary(Dictionary)>>associationsDo:
+            |                  |7.3% {835ms} WeakKeyDictionary>>associationsDo:
+            |                  |  |5.9% {678ms} WeakKeyDictionary(Dictionary)>>keysDo:
+            |                  |  |  |3.1% {360ms} primitives
+            |                  |  |  |2.6% {299ms} WeakKeyDictionary(Dictionary)>>keys
+            |                  |  |  |  2.3% {262ms} primitives
+            |                  |  |1.1% {129ms} primitives
+            |                  |3.7% {425ms} primitives
+            |                1.8% {209ms} primitives
+          11.8% {1357ms} IdentitySet(Set)>>do:
+            11.8% {1357ms} MetaLink>>uninstall
+              11.8% {1357ms} RBMethodNode(RBProgramNode)>>removeLink:
+                9.5% {1094ms} ReflectiveMethod>>removeLink:
+                  |4.7% {542ms} ReflectiveMethod>>destroyTwin
+                  |  |2.4% {272ms} ReflectiveMethod>>installCompiledMethod
+                  |  |  |2.3% {268ms} ReflectiveMethod>>installMethod:
+                  |  |  |  2.3% {268ms} MethodDictionary>>at:put:
+                  |  |  |    2.3% {268ms} MethodDictionary(HashedCollection)>>fullCheck
+                  |  |1.4% {159ms} SystemAnnouncer>>unsubscribe:
+                  |  |  1.4% {159ms} SystemAnnouncer(Announcer)>>unsubscribe:
+                  |  |    1.4% {159ms} SubscriptionRegistry>>removeSubscriber:
+                  |  |      1.4% {159ms} SubscriptionRegistry>>protected:
+                  |  |        1.4% {159ms} Semaphore>>critical:
+                  |  |          1.4% {159ms} BlockClosure>>ensure:
+                  |  |            1.4% {159ms} Semaphore>>critical:
+                  |  |              1.4% {159ms} SubscriptionRegistry>>protected:
+                  |  |                1.4% {159ms} SubscriptionRegistry>>removeSubscriber:
+                  |  |                  1.4% {159ms} IdentitySet(Collection)>>removeAllSuchThat:
+                  |  |                    1.4% {157ms} IdentitySet(Set)>>do:
+                  |  |                      1.1% {123ms} primitives
+                  |2.5% {290ms} CompiledMethod>>invalidate
+                  |  |2.5% {286ms} ReflectiveMethod>>installReflectiveMethod
+                  |  |  2.5% {286ms} ReflectiveMethod>>installMethod:
+                  |  |    2.5% {286ms} MethodDictionary>>at:put:
+                  |  |      2.5% {286ms} MethodDictionary(HashedCollection)>>fullCheck
+                  |2.2% {250ms} SystemAnnouncer>>announce:
+                  |  2.2% {250ms} SystemAnnouncer(Announcer)>>announce:
+                  |    2.2% {250ms} SubscriptionRegistry>>deliver:
+                  |      1.3% {145ms} SubscriptionRegistry>>protected:
+                  |        1.3% {145ms} Semaphore>>critical:
+                  |          1.3% {145ms} BlockClosure>>ensure:
+                  |            1.3% {145ms} Semaphore>>critical:
+                  |              1.3% {145ms} SubscriptionRegistry>>protected:
+                  |                1.3% {145ms} SubscriptionRegistry>>deliver:
+                  |                  1.3% {145ms} SubscriptionRegistry>>subscriptionsHandling:
+                  |                    1.3% {145ms} Array class(SequenceableCollection class)>>streamContents:
+                  |                      1.3% {145ms} Array class(SequenceableCollection class)>>new:streamContents:
+                  |                        1.3% {145ms} SubscriptionRegistry>>subscriptionsHandling:
+                  |                          1.3% {145ms} IdentitySet(Set)>>do:
+                2.2% {255ms} SystemAnnouncer>>announce:
+                  2.2% {255ms} SystemAnnouncer(Announcer)>>announce:
+                    2.2% {253ms} SubscriptionRegistry>>deliver:
+                      1.5% {169ms} SubscriptionRegistry>>protected:
+                        1.5% {169ms} Semaphore>>critical:
+                          1.5% {169ms} BlockClosure>>ensure:
+                            1.5% {169ms} Semaphore>>critical:
+                              1.5% {169ms} SubscriptionRegistry>>protected:
+                                1.5% {169ms} SubscriptionRegistry>>deliver:
+                                  1.5% {169ms} SubscriptionRegistry>>subscriptionsHandling:
+                                    1.5% {169ms} Array class(SequenceableCollection class)>>streamContents:
+                                      1.5% {169ms} Array class(SequenceableCollection class)>>new:streamContents:
+                                        1.5% {169ms} SubscriptionRegistry>>subscriptionsHandling:
+                                          1.5% {169ms} IdentitySet(Set)>>do:
+                                            1.2% {136ms} SubscriptionRegistry>>subscriptionsHandling:
+
+**Leaves**
+9.1% {1050ms} IdentityDictionary(HashedCollection)>>fullCheck
+7.8% {894ms} SmallInteger class(Behavior)>>inheritsFrom:
+6.5% {744ms} IdentitySet(Set)>>do:
+5.5% {629ms} SourceFileArray>>getPreambleFrom:at:
+4.7% {542ms} WeakKeyDictionary(Dictionary)>>associationsDo:
+4.0% {457ms} Array(SequenceableCollection)>>do:
+3.6% {419ms} WeakKeyDictionary(Dictionary)>>keysDo:
+3.6% {418ms} WeakArray class>>finalizationProcess
+3.1% {352ms} ByteSymbol(Symbol)>>=
+2.8% {316ms} MethodDictionary(Dictionary)>>keys
+2.3% {269ms} File class>>open:writable:
+2.1% {238ms} SubscriptionRegistry>>subscriptionsHandling:
+1.4% {164ms} WeakIdentityKeyDictionary(WeakKeyDictionary)>>expiredValuesDo:
+1.4% {157ms} Set>>includes:
+1.3% {148ms} WeakKeyDictionary>>associationsDo:
+1.3% {146ms} ASTCacheReset class(Announcement class)>>handlesAnnouncement:
+1.1% {125ms} WeakKeyAssociation>>key
+1.1% {124ms} SourceFile>>next
+
+**Memory**
+	old			+16,777,216 bytes
+	young		-17,419,296 bytes
+	used		-642,080 bytes
+	free		+17,419,296 bytes
+
+**GCs**
+	full			1 totalling 91ms (1.0% uptime), avg 91.0ms
+	incr		778 totalling 334ms (3.0% uptime), avg 0.0ms
+	tenures		194,646 (avg 0 GCs/tenure)
+	root table	0 overflows
+
