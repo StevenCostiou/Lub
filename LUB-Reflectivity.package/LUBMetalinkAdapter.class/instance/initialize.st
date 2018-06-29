@@ -1,4 +1,5 @@
 initialization
 initialize
 	super initialize.
-	metalinks := IdentityDictionary new
+	metalinks := IdentityDictionary new.
+	adaptedObjects := IdentityDictionary new

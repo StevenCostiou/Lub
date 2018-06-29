@@ -13,4 +13,4 @@ benchmarkLubAdaptation
 			(#m4 -> #acquire)}
 		with: Cadapt
 		states: #().
-	TimeProfiler spyOn: [ col do: [ :o | o adaptWith: a ] ]
+	TimeProfiler spyOn: [col do: [ :o | o adaptWith: a ]]

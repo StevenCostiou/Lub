@@ -2,14 +2,16 @@ utility
 computeMeansAndConfidenceIntervalFrom: aDictionnary
 	| results |
 	results := Dictionary new.
-	results
+	aDictionnary
 		keysAndValuesDo: [ :key :values | 
 			| mean confidenceInterval |
-			mean := values average.
+			mean := values average asFloat.
 			confidenceInterval := self compute95ConfidenceIntervalFor: values.
 			results
 				at: key
 				put:
 					{mean.
-					confidenceInterval} ].
+					confidenceInterval.
+					(mean - confidenceInterval).
+					(mean + confidenceInterval)} ].
 	^ results
