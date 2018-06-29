@@ -1,3 +1,3 @@
 optimization
 hasAlreadyMigrated: anObject
-	^ adaptedObjects keys detect: [ :o | o class superclass == anObject class ] ifNone: [ nil ]
+	^ adaptedObjects keys detect: [ :class | class superclass == anObject class ] ifNone: [ nil ]

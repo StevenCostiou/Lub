@@ -14,7 +14,7 @@ adaptObject: anObject
 						withLink: link
 						inObject: anObject
 						hook: hook ] ].
-	metalinks at: anObject class put: links asSet.
-	(adaptedObjects at: anObject class ifAbsentPut: [ WeakOrderedCollection new ])
-		add: anObject.
+	metalinks at: anObject  put: links asSet.
+	"(adaptedObjects at: anObject class ifAbsentPut: [ WeakOrderedCollection new ])
+		add: anObject."
 	^ anObject
