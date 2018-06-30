@@ -15,5 +15,5 @@ pharoMemoryBenchmarkSameClass
 	Smalltalk garbageCollect.
 	1000 timesRepeat: block.
 	results at: 1000 put: (self lubSpaceTallyFor: (Array with: (Smalltalk at: #C1))).
-	self saveResults: results named: 'pharo-mem-same-class'.
+	self saveResults: results named: 'memory.pharo.1.class'.
 	^ results

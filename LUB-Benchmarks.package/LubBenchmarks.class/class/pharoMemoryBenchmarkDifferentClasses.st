@@ -18,6 +18,6 @@ pharoMemoryBenchmarkDifferentClasses
 	Smalltalk garbageCollect.
 	1 to: 1000 do: block.
 	results at: 1000 put: (self lubSpaceTallyFor: (instances collect: [ :o | o class ])).
-	self saveResults: results named: 'pharo-mem-1000-classes' .
+	self saveResults: results named: 'memory.pharo.1000.classes' .
 	^ results
 	

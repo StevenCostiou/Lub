@@ -1,7 +1,12 @@
 adapting
 unadaptObject: anObject
+	| objectsOfSameKind |
 	metalinks ifNil: [ ^ self ].
-	anObject class isAnonymous ifTrue:[metalinks removeKey: anObject ifAbsent: [  ].
-		^self bruteMigrationFor: anObject to: anObject class superclass].
-	(metalinks at: anObject ifAbsent: [ ^ self ]) do: [ :link | link uninstall ].
-	metalinks removeKey: anObject ifAbsent: [  ]
+	anObject isAdapted
+		ifFalse: [ ^ self ].
+	self bruteMigrationFor: anObject to: anObject class superclass.
+	objectsOfSameKind := adaptedObjects at: anObject class ifAbsentPut: [ WeakOrderedCollection new ].
+	objectsOfSameKind remove: anObject ifAbsent: [  ].
+	objectsOfSameKind isEmpty
+		ifFalse: [ ^ self ].
+"	metalinks do: [ :link | link uninstall ]"

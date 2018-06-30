@@ -15,7 +15,7 @@ lubMemoryBenchmarkSameClass
 	instances add: o ].
 	Smalltalk garbageCollect.
 	10 timesRepeat: block.
-	results at: 1 put: (self lubSpaceTallyFor: (instances collect: [ :o | o class ])).
+	results at: 10 put: (self lubSpaceTallyFor: (instances collect: [ :o | o class ])).
 	instances := OrderedCollection new.
 	Smalltalk garbageCollect.
 	100 timesRepeat: block.
@@ -24,5 +24,5 @@ lubMemoryBenchmarkSameClass
 	Smalltalk garbageCollect.
 	1000 timesRepeat: block.
 	results at: 1000 put: (self lubSpaceTallyFor: (instances collect: [ :o | o class ])).
-	self saveResults: results named: 'lub-mem-same-class' .
+	self saveResults: results named: 'memory.lub.1.class' .
 	^ results

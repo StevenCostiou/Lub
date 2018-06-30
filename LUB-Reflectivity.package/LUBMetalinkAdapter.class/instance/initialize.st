@@ -1,5 +1,6 @@
 initialization
 initialize
 	super initialize.
-	metalinks := IdentityDictionary new.
-	adaptedObjects := IdentityDictionary new
+	metalinks := Set new.
+	adaptedObjects := IdentityDictionary new.
+	classSpecs := Dictionary new.

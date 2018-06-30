@@ -3,7 +3,7 @@ control: adaptedAst withLink: link inObject: object hook: hook
 	| newSelector originalAst adaptedSource |
 	originalAst := hook originalMethod ast.
 	link control: hook control.
-	link metaObject: object.
+	link metaObject: #receiver.
 	link arguments: hook args.
 	originalAst link: link forObject: object.
 
