@@ -1,0 +1,416 @@
+ - 48 tallies, 50 msec.
+
+**Tree**
+--------------------------------
+Process: (40s) Morphic UI Process: nil
+--------------------------------
+100.0% {50ms} LUBAdaptation>>adaptObject:
+  95.8% {48ms} LUBMetalinkAdapter>>adaptObject:
+    |95.8% {48ms} Array(SequenceableCollection)>>collect:
+    |  95.8% {48ms} LUBMetalinkAdapter>>adaptObject:
+    |    83.3% {42ms} LUBMetalinkAdapter>>control:withLink:inObject:hook:
+    |      |75.0% {38ms} RBMethodNode(RBProgramNode)>>link:forObject:
+    |      |  |75.0% {38ms} MetaLink>>linkToNode:forObject:
+    |      |  |  75.0% {38ms} MetaLinkInstaller>>install:onNode:forObject:
+    |      |  |    37.5% {19ms} MetaLinkInstaller>>astFromNode:forObject:inClass:
+    |      |  |      |37.5% {19ms} MetaLinkInstaller>>copyNode:inClass:
+    |      |  |      |  37.5% {19ms} MetaLinkInstaller>>compileMethodNodeFor:in:
+    |      |  |      |    20.8% {10ms} MetaLinkAnonymousClassBuilder>>compileMethodFrom:in:
+    |      |  |      |      |20.8% {10ms} a subclass of C class(Behavior)>>compile:
+    |      |  |      |      |  20.8% {10ms} a subclass of C class(ClassDescription)>>compile:notifying:
+    |      |  |      |      |    20.8% {10ms} a subclass of C class(ClassDescription)>>compile:classified:notifying:
+    |      |  |      |      |      20.8% {10ms} a subclass of C class(ClassDescription)>>compile:classified:withStamp:notifying:
+    |      |  |      |      |        20.8% {10ms} a subclass of C class(ClassDescription)>>compile:classified:withStamp:notifying:logSource:
+    |      |  |      |      |          12.5% {6ms} OpalCompiler>>compile
+    |      |  |      |      |            |12.5% {6ms} BlockClosure>>on:do:
+    |      |  |      |      |            |  12.5% {6ms} OpalCompiler>>compile
+    |      |  |      |      |            |    8.3% {4ms} BlockClosure>>on:do:
+    |      |  |      |      |            |      |8.3% {4ms} OpalCompiler>>compile
+    |      |  |      |      |            |      |  8.3% {4ms} OpalCompiler>>parse
+    |      |  |      |      |            |      |    8.3% {4ms} OpalCompiler>>parseMethod
+    |      |  |      |      |            |      |      8.3% {4ms} RBParser class>>parseMethod:
+    |      |  |      |      |            |      |        8.3% {4ms} RBParser class>>parseMethod:onError:
+    |      |  |      |      |            |      |          8.3% {4ms} BlockClosure>>on:do:
+    |      |  |      |      |            |      |            8.3% {4ms} RBParser class>>parseMethod:onError:
+    |      |  |      |      |            |      |              8.3% {4ms} RBParser>>parseMethod:
+    |      |  |      |      |            |      |                8.3% {4ms} RBParser>>parseMethod
+    |      |  |      |      |            |      |                  8.3% {4ms} RBParser>>parseStatements:into:
+    |      |  |      |      |            |      |                    8.3% {4ms} RBParser>>parseStatementList:into:
+    |      |  |      |      |            |      |                      8.3% {4ms} RBParser>>addCommentsTo:
+    |      |  |      |      |            |      |                        8.3% {4ms} RBSequenceNode(RBProgramNode)>>comments:
+    |      |  |      |      |            |      |                          8.3% {4ms} Array(Collection)>>ifEmpty:ifNotEmpty:
+    |      |  |      |      |            |      |                            8.3% {4ms} RBSequenceNode(RBProgramNode)>>comments:
+    |      |  |      |      |            |    4.2% {2ms} RBMethodNode>>generate:
+    |      |  |      |      |            |      4.2% {2ms} RBMethodNode>>generateIR
+    |      |  |      |      |            |        4.2% {2ms} OCASTTranslator>>visitNode:
+    |      |  |      |      |            |          4.2% {2ms} OCASTTranslator(RBProgramNodeVisitor)>>visitNode:
+    |      |  |      |      |            |            4.2% {2ms} RBMethodNode>>acceptVisitor:
+    |      |  |      |      |            |              4.2% {2ms} OCASTTranslator>>visitMethodNode:
+    |      |  |      |      |            |                4.2% {2ms} OCASTTranslatorForEffect(OCASTTranslator)>>visitNode:
+    |      |  |      |      |            |                  4.2% {2ms} OCASTTranslatorForEffect(RBProgramNodeVisitor)>>visitNode:
+    |      |  |      |      |            |                    4.2% {2ms} RBSequenceNode>>acceptVisitor:
+    |      |  |      |      |            |                      4.2% {2ms} OCASTTranslatorForEffect>>visitSequenceNode:
+    |      |  |      |      |            |                        4.2% {2ms} OrderedCollection>>do:
+    |      |  |      |      |            |                          4.2% {2ms} OCASTTranslatorForEffect>>visitSequenceNode:
+    |      |  |      |      |            |                            4.2% {2ms} OCASTTranslatorForEffect(OCASTTranslator)>>visitNode:
+    |      |  |      |      |            |                              4.2% {2ms} OCASTTranslatorForEffect(RBProgramNodeVisitor)>>visitNode:
+    |      |  |      |      |          4.2% {2ms} a subclass of C class(ClassDescription)>>logMethodSource:forMethod:inCategory:withStamp:
+    |      |  |      |      |            |4.2% {2ms} CompiledMethod>>putSource:class:category:withStamp:priorMethod:
+    |      |  |      |      |            |  4.2% {2ms} CompiledMethod>>putSource:withPreamble:
+    |      |  |      |      |            |    4.2% {2ms} String class(SequenceableCollection class)>>streamContents:
+    |      |  |      |      |          4.2% {2ms} a subclass of C class(ClassDescription)>>addAndClassifySelector:withMethod:inProtocol:
+    |      |  |      |    16.7% {8ms} CompiledMethod>>ast
+    |      |  |      |      16.7% {8ms} ASTCache class>>at:
+    |      |  |      |        16.7% {8ms} ASTCache>>at:
+    |      |  |      |          16.7% {8ms} ASTCache(Dictionary)>>at:ifAbsentPut:
+    |      |  |      |            16.7% {8ms} ASTCache(Dictionary)>>at:ifAbsent:
+    |      |  |      |              16.7% {8ms} ASTCache(Dictionary)>>at:ifAbsentPut:
+    |      |  |      |                16.7% {8ms} ASTCache>>at:
+    |      |  |      |                  12.5% {6ms} CompiledMethod>>parseTree
+    |      |  |      |                    |12.5% {6ms} CompiledMethod>>sourceCode
+    |      |  |      |                    |  12.5% {6ms} CompiledMethod>>getSourceFromFile
+    |      |  |      |                    |    12.5% {6ms} BlockClosure>>on:do:
+    |      |  |      |                    |      12.5% {6ms} CompiledMethod>>getSourceFromFile
+    |      |  |      |                    |        12.5% {6ms} SourceFileArray>>sourceCodeAt:
+    |      |  |      |                    |          12.5% {6ms} SourceFileArray>>readStreamAt:ifPresent:ifAbsent:
+    |      |  |      |                    |            12.5% {6ms} SourceFileArray>>readStreamAtFileIndex:atPosition:ifPresent:ifAbsent:
+    |      |  |      |                    |              12.5% {6ms} SourceFileArray>>createReadOnlyFiles
+    |      |  |      |                    |                12.5% {6ms} SourceFile>>readOnlyCopy
+    |      |  |      |                    |                  12.5% {6ms} SourceFile>>tryOpenReadOnly:
+    |      |  |      |                    |                    12.5% {6ms} Array(SequenceableCollection)>>do:
+    |      |  |      |                    |                      12.5% {6ms} SourceFile>>tryOpenReadOnly:
+    |      |  |      |                    |                        12.5% {6ms} BlockClosure>>on:do:
+    |      |  |      |                    |                          12.5% {6ms} SourceFile>>tryOpenReadOnly:
+    |      |  |      |                    |                            8.3% {4ms} FileReference>>readStream
+    |      |  |      |                    |                              |8.3% {4ms} FileReference(AbstractFileReference)>>readStreamEncoded:
+    |      |  |      |                    |                              |  8.3% {4ms} FileReference>>binaryReadStream
+    |      |  |      |                    |                              |    8.3% {4ms} FileSystem>>binaryReadStreamOn:
+    |      |  |      |                    |                              |      8.3% {4ms} FileHandle>>binaryReadStream
+    |      |  |      |                    |                              |        8.3% {4ms} File>>readStream
+    |      |  |      |                    |                              |          8.3% {4ms} File>>openForRead
+    |      |  |      |                    |                              |            8.3% {4ms} File>>openForWrite:
+    |      |  |      |                    |                              |              4.2% {2ms} File>>basicOpenForWrite:
+    |      |  |      |                    |                              |                |4.2% {2ms} File class>>retryWithGC:until:forFileNamed:
+    |      |  |      |                    |                              |                |  4.2% {2ms} WeakRegistry>>keys
+    |      |  |      |                    |                              |                |    4.2% {2ms} WeakRegistry>>protected:
+    |      |  |      |                    |                              |                |      4.2% {2ms} Semaphore>>critical:ifError:
+    |      |  |      |                    |                              |                |        4.2% {2ms} Semaphore>>critical:
+    |      |  |      |                    |                              |                |          4.2% {2ms} BlockClosure>>ensure:
+    |      |  |      |                    |                              |                |            4.2% {2ms} Semaphore>>critical:
+    |      |  |      |                    |                              |                |              4.2% {2ms} Semaphore>>critical:ifError:
+    |      |  |      |                    |                              |                |                4.2% {2ms} BlockClosure>>ifError:
+    |      |  |      |                    |                              |                |                  4.2% {2ms} BlockClosure>>on:do:
+    |      |  |      |                    |                              |                |                    4.2% {2ms} WeakRegistry>>keys
+    |      |  |      |                    |                              |                |                      4.2% {2ms} WeakIdentityKeyDictionary(Dictionary)>>keys
+    |      |  |      |                    |                              |                |                        4.2% {2ms} Array class(SequenceableCollection class)>>new:streamContents:
+    |      |  |      |                    |                              |                |                          4.2% {2ms} WeakIdentityKeyDictionary(Dictionary)>>keys
+    |      |  |      |                    |                              |                |                            4.2% {2ms} WeakIdentityKeyDictionary(Dictionary)>>keysDo:
+    |      |  |      |                    |                              |                |                              4.2% {2ms} WeakIdentityKeyDictionary(WeakKeyDictionary)>>associationsDo:
+    |      |  |      |                    |                              |                |                                4.2% {2ms} WeakIdentityKeyDictionary(Dictionary)>>associationsDo:
+    |      |  |      |                    |                              |                |                                  4.2% {2ms} Array(SequenceableCollection)>>do:
+    |      |  |      |                    |                              |                |                                    4.2% {2ms} WeakIdentityKeyDictionary(Dictionary)>>associationsDo:
+    |      |  |      |                    |                              |                |                                      4.2% {2ms} WeakIdentityKeyDictionary(WeakKeyDictionary)>>associationsDo:
+    |      |  |      |                    |                              |              4.2% {2ms} BinaryFileStream class(AbstractBinaryFileStream class)>>handle:file:forWrite:
+    |      |  |      |                    |                            4.2% {2ms} ByteString(String)>>asFileReference
+    |      |  |      |                    |                              4.2% {2ms} FileSystem>>referenceTo:
+    |      |  |      |                    |                                4.2% {2ms} FileSystem>>pathFromObject:
+    |      |  |      |                    |                                  4.2% {2ms} ByteString(String)>>asPathWith:
+    |      |  |      |                    |                                    4.2% {2ms} FileSystem>>pathFromString:
+    |      |  |      |                    |                                      4.2% {2ms} UnixStore(FileSystemStore)>>pathFromString:
+    |      |  |      |                    |                                        4.2% {2ms} Path class>>from:delimiter:
+    |      |  |      |                    |                                          4.2% {2ms} AbsolutePath class(Path class)>>withAll:
+    |      |  |      |                    |                                            4.2% {2ms} OrderedCollection>>do:
+    |      |  |      |                    |                                              4.2% {2ms} AbsolutePath class(Path class)>>withAll:
+    |      |  |      |                    |                                                4.2% {2ms} Character(Object)>>split:
+    |      |  |      |                    |                                                  4.2% {2ms} Character(Object)>>split:do:
+    |      |  |      |                    |                                                    4.2% {2ms} Character(Object)>>split:indicesDo:
+    |      |  |      |                    |                                                      4.2% {2ms} Character(Object)>>split:do:
+    |      |  |      |                    |                                                        4.2% {2ms} Character(Object)>>split:
+    |      |  |      |                    |                                                          4.2% {2ms} OrderedCollection>>add:
+    |      |  |      |                    |                                                            4.2% {2ms} OrderedCollection>>addLast:
+    |      |  |      |                    |                                                              4.2% {2ms} OrderedCollection>>makeRoomAtLast
+    |      |  |      |                  4.2% {2ms} RBMethodNode>>doSemanticAnalysisIn:
+    |      |  |      |                    4.2% {2ms} RBMethodNode>>doSemanticAnalysis
+    |      |  |      |                      4.2% {2ms} OCASTSemanticAnalyzer>>analyze:
+    |      |  |      |                        4.2% {2ms} OCASTSemanticAnalyzer(RBProgramNodeVisitor)>>visitNode:
+    |      |  |      |                          4.2% {2ms} RBMethodNode>>acceptVisitor:
+    |      |  |      |                            4.2% {2ms} OCASTSemanticAnalyzer>>visitMethodNode:
+    |      |  |      |                              4.2% {2ms} OCASTSemanticAnalyzer(RBProgramNodeVisitor)>>visitNode:
+    |      |  |      |                                4.2% {2ms} RBSequenceNode>>acceptVisitor:
+    |      |  |      |                                  4.2% {2ms} OCASTSemanticAnalyzer>>visitSequenceNode:
+    |      |  |    18.8% {9ms} MetaLinkAnonymousClassBuilder>>anonymousClassForObject:
+    |      |  |      |18.8% {9ms} MetaLinkAnonymousClassBuilder>>newAnonymousSubclassFor:
+    |      |  |      |  18.8% {9ms} C class(Class)>>newAnonymousSubclass
+    |      |  |      |    18.8% {9ms} ShiftAnonymousClassInstaller class(ShiftClassInstaller class)>>make:
+    |      |  |      |      18.8% {9ms} ShiftAnonymousClassInstaller(ShiftClassInstaller)>>make:
+    |      |  |      |        12.5% {6ms} BlockClosure>>on:do:
+    |      |  |      |          |12.5% {6ms} ShiftAnonymousClassInstaller(ShiftClassInstaller)>>make:
+    |      |  |      |          |  12.5% {6ms} ShiftClassBuilder>>build
+    |      |  |      |          |    12.5% {6ms} ShiftClassBuilder>>createMetaclass
+    |      |  |      |          |      8.3% {4ms} Metaclass class(Behavior)>>new
+    |      |  |      |          |        |8.3% {4ms} Metaclass(Behavior)>>initialize
+    |      |  |      |          |        |  8.3% {4ms} Metaclass(Behavior)>>emptyMethodDictionary
+    |      |  |      |          |      4.2% {2ms} ShDefaultBuilderEnhancer>>configureMetaclass:superclass:withLayoutType:slots:
+    |      |  |      |          |        4.2% {2ms} Metaclass(ClassDescription)>>superclass:withLayoutType:slots:
+    |      |  |      |          |          4.2% {2ms} Metaclass(ClassDescription)>>superclass:layout:
+    |      |  |      |          |            4.2% {2ms} Metaclass(ClassDescription)>>superclass:methodDictionary:format:
+    |      |  |      |          |              4.2% {2ms} Metaclass(Behavior)>>superclass:methodDictionary:format:
+    |      |  |      |          |                4.2% {2ms} Metaclass(Behavior)>>setFormat:
+    |      |  |      |        6.3% {3ms} ShiftAnonymousClassInstaller(ShiftClassInstaller)>>fixSlotScope:
+    |      |  |      |          6.3% {3ms} ShiftAnonymousClassInstaller(Object)>>assert:
+    |      |  |    18.8% {9ms} RBMethodNode(RBProgramNode)>>link:
+    |      |  |      10.4% {5ms} CompiledMethod>>installLink:
+    |      |  |        |10.4% {5ms} SystemAnnouncer>>announce:
+    |      |  |        |  10.4% {5ms} SystemAnnouncer(Announcer)>>announce:
+    |      |  |        |    10.4% {5ms} SubscriptionRegistry>>deliver:
+    |      |  |        |      10.4% {5ms} SubscriptionRegistry>>deliver:to:
+    |      |  |        |        10.4% {5ms} SubscriptionRegistry>>deliver:to:startingAt:
+    |      |  |        |          10.4% {5ms} BlockClosure>>ifCurtailed:
+    |      |  |        |            10.4% {5ms} SubscriptionRegistry>>deliver:to:startingAt:
+    |      |  |        |              10.4% {5ms} WeakAnnouncementSubscription>>deliver:
+    |      |  |        |                10.4% {5ms} BlockClosure>>on:fork:
+    |      |  |        |                  10.4% {5ms} BlockClosure>>on:do:
+    |      |  |        |                    10.4% {5ms} WeakAnnouncementSubscription>>deliver:
+    |      |  |        |                      10.4% {5ms} WeakMessageSend>>cull:cull:
+    |      |  |        |                        10.4% {5ms} WeakMessageSend>>cull:
+    |      |  |        |                          10.4% {5ms} WeakMessageSend>>value:
+    |      |  |        |                            10.4% {5ms} ClyNavigationEnvironment>>systemChanged:
+    |      |  |        |                              10.4% {5ms} ClyNavigationEnvironment>>updateUsing:by:
+    |      |  |        |                                10.4% {5ms} BlockClosure>>ensure:
+    |      |  |        |                                  10.4% {5ms} ClyNavigationEnvironment>>updateUsing:by:
+    |      |  |        |                                    10.4% {5ms} Mutex>>critical:
+    |      |  |        |                                      10.4% {5ms} Semaphore>>critical:
+    |      |  |        |                                        10.4% {5ms} BlockClosure>>ensure:
+    |      |  |        |                                          10.4% {5ms} Semaphore>>critical:
+    |      |  |        |                                            10.4% {5ms} Mutex>>critical:
+    |      |  |        |                                              10.4% {5ms} BlockClosure>>ensure:
+    |      |  |        |                                                10.4% {5ms} ClyNavigationEnvironment>>updateUsing:by:
+    |      |  |        |                                                  10.4% {5ms} BlockClosure>>ensure:
+    |      |  |        |                                                    10.4% {5ms} ClyNavigationEnvironment>>updateUsing:by:
+    |      |  |        |                                                      10.4% {5ms} BlockClosure>>on:do:
+    |      |  |        |                                                        10.4% {5ms} ClyNavigationEnvironment>>systemChanged:
+    |      |  |        |                                                          10.4% {5ms} ClyNavigationEnvironment>>handleSystemChange:
+    |      |  |        |                                                            10.4% {5ms} Array(SequenceableCollection)>>do:
+    |      |  |        |                                                              10.4% {5ms} ClyNavigationEnvironment>>handleSystemChange:
+    |      |  |        |                                                                10.4% {5ms} ClyExtensionLastSortedClasses(ClyQueryResult)>>handleSystemChange:byProcessingList:
+    |      |  |        |                                                                  10.4% {5ms} Mutex>>tryEnterCritical:ifLocked:
+    |      |  |        |                                                                    10.4% {5ms} Semaphore>>critical:ifLocked:
+    |      |  |        |                                                                      10.4% {5ms} Semaphore>>critical:
+    |      |  |        |                                                                        10.4% {5ms} BlockClosure>>ensure:
+    |      |  |        |                                                                          10.4% {5ms} Semaphore>>critical:
+    |      |  |        |                                                                            10.4% {5ms} Mutex>>tryEnterCritical:ifLocked:
+    |      |  |        |                                                                              6.3% {3ms} primitives
+    |      |  |        |                                                                              4.2% {2ms} BlockClosure>>ensure:
+    |      |  |        |                                                                                4.2% {2ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+    |      |  |        |                                                                                  4.2% {2ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+    |      |  |        |                                                                                    4.2% {2ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+    |      |  |        |                                                                                      4.2% {2ms} Mutex>>critical:
+    |      |  |        |                                                                                        4.2% {2ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+    |      |  |        |                                                                                          4.2% {2ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+    |      |  |        |                                                                                            4.2% {2ms} ClyAllMethodGroups>>isResult:affectedBy:
+    |      |  |        |                                                                                              4.2% {2ms} ClyClassSideScope(ClyAbstractClassScope)>>includesMethodGroupsAffectedBy:
+    |      |  |        |                                                                                                4.2% {2ms} ClyClassSideScope(ClyAbstractClassScope)>>methodGroupProvidersDo:
+    |      |  |        |                                                                                                  4.2% {2ms} ClyNavigationEnvironment>>pluginsDo:
+    |      |  |        |                                                                                                    4.2% {2ms} OrderedCollection>>do:
+    |      |  |        |                                                                                                      4.2% {2ms} ClyClassSideScope(ClyAbstractClassScope)>>methodGroupProvidersDo:
+    |      |  |        |                                                                                                        4.2% {2ms} Array(SequenceableCollection)>>do:
+    |      |  |        |                                                                                                          4.2% {2ms} ClyClassSideScope(ClyAbstractClassScope)>>includesMethodGroupsAffectedBy:
+    |      |  |        |                                                                                                            4.2% {2ms} ClyUndeclaredMethodGroupProvider(ClySingleMethodGroupProvider)>>providesGroupsAffectedBy:inScope:
+    |      |  |        |                                                                                                              4.2% {2ms} ClyUndeclaredMethods(ClyMethodQuery)>>isResult:affectedBy:
+    |      |  |        |                                                                                                                4.2% {2ms} MetalinkChanged>>canAffectResultOfMethodQuery:
+    |      |  |        |                                                                                                                  4.2% {2ms} IdentitySet(Collection)>>anySatisfy:
+    |      |  |        |                                                                                                                    4.2% {2ms} IdentitySet(Set)>>do:
+    |      |  |        |                                                                                                                      4.2% {2ms} IdentitySet(Collection)>>anySatisfy:
+    |      |  |        |                                                                                                                        4.2% {2ms} MetalinkChanged>>canAffectResultOfMethodQuery:
+    |      |  |        |                                                                                                                          4.2% {2ms} ClyUndeclaredMethods(ClyMethodQuery)>>isAffectedByChangedMethod:
+    |      |  |        |                                                                                                                            4.2% {2ms} ClyUndeclaredMethods>>selectsMethod:
+    |      |  |        |                                                                                                                              4.2% {2ms} CompiledMethod>>usesUndeclares
+    |      |  |        |                                                                                                                                4.2% {2ms} CompiledMethod(CompiledCode)>>literalsDo:
+    |      |  |        |                                                                                                                                  4.2% {2ms} CompiledMethod>>usesUndeclares
+    |      |  |        |                                                                                                                                    4.2% {2ms} a subclass of C class(Class)>>isObsolete
+    |      |  |        |                                                                                                                                      4.2% {2ms} a subclass of C class(Behavior)>>propertyAt:ifAbsent:
+    |      |  |        |                                                                                                                                        4.2% {2ms} a subclass of C class(Behavior)>>properties
+    |      |  |        |                                                                                                                                          4.2% {2ms} WeakIdentityKeyDictionary(Dictionary)>>at:ifAbsent:
+    |      |  |        |                                                                                                                                            4.2% {2ms} WeakIdentityKeyDictionary(HashedCollection)>>findElementOrNil:
+    |      |  |        |                                                                                                                                              4.2% {2ms} WeakIdentityKeyDictionary(WeakKeyDictionary)>>scanFor:
+    |      |  |        |                                                                                                                                                4.2% {2ms} WeakIdentityKeyDictionary>>startIndexFor:
+    |      |  |        |                                                                                                                                                  4.2% {2ms} a subclass of C class(ProtoObject)>>identityHash
+    |      |  |      8.3% {4ms} SystemAnnouncer>>announce:
+    |      |  |        8.3% {4ms} SystemAnnouncer(Announcer)>>announce:
+    |      |  |          8.3% {4ms} SubscriptionRegistry>>deliver:
+    |      |  |            8.3% {4ms} SubscriptionRegistry>>deliver:to:
+    |      |  |              8.3% {4ms} SubscriptionRegistry>>deliver:to:startingAt:
+    |      |  |                8.3% {4ms} BlockClosure>>ifCurtailed:
+    |      |  |                  8.3% {4ms} SubscriptionRegistry>>deliver:to:startingAt:
+    |      |  |                    8.3% {4ms} WeakAnnouncementSubscription>>deliver:
+    |      |  |                      8.3% {4ms} BlockClosure>>on:fork:
+    |      |  |                        8.3% {4ms} BlockClosure>>on:do:
+    |      |  |                          8.3% {4ms} WeakAnnouncementSubscription>>deliver:
+    |      |  |                            8.3% {4ms} WeakMessageSend>>cull:cull:
+    |      |  |                              8.3% {4ms} WeakMessageSend>>cull:
+    |      |  |                                8.3% {4ms} WeakMessageSend>>value:
+    |      |  |                                  8.3% {4ms} ClyNavigationEnvironment>>systemChanged:
+    |      |  |                                    8.3% {4ms} ClyNavigationEnvironment>>updateUsing:by:
+    |      |  |                                      8.3% {4ms} BlockClosure>>ensure:
+    |      |  |                                        8.3% {4ms} ClyNavigationEnvironment>>updateUsing:by:
+    |      |  |                                          8.3% {4ms} Mutex>>critical:
+    |      |  |                                            8.3% {4ms} Semaphore>>critical:
+    |      |  |                                              8.3% {4ms} BlockClosure>>ensure:
+    |      |  |                                                8.3% {4ms} Semaphore>>critical:
+    |      |  |                                                  8.3% {4ms} Mutex>>critical:
+    |      |  |                                                    8.3% {4ms} BlockClosure>>ensure:
+    |      |  |                                                      8.3% {4ms} ClyNavigationEnvironment>>updateUsing:by:
+    |      |  |                                                        8.3% {4ms} BlockClosure>>ensure:
+    |      |  |                                                          8.3% {4ms} ClyNavigationEnvironment>>updateUsing:by:
+    |      |  |                                                            8.3% {4ms} BlockClosure>>on:do:
+    |      |  |                                                              8.3% {4ms} ClyNavigationEnvironment>>systemChanged:
+    |      |  |                                                                8.3% {4ms} ClyNavigationEnvironment>>handleSystemChange:
+    |      |  |                                                                  8.3% {4ms} Array(SequenceableCollection)>>do:
+    |      |  |                                                                    8.3% {4ms} ClyNavigationEnvironment>>handleSystemChange:
+    |      |  |                                                                      8.3% {4ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+    |      |  |                                                                        8.3% {4ms} Mutex>>tryEnterCritical:ifLocked:
+    |      |  |                                                                          8.3% {4ms} Semaphore>>critical:ifLocked:
+    |      |  |                                                                            8.3% {4ms} Semaphore>>critical:
+    |      |  |                                                                              8.3% {4ms} BlockClosure>>ensure:
+    |      |  |                                                                                8.3% {4ms} Semaphore>>critical:
+    |      |  |                                                                                  8.3% {4ms} Mutex>>tryEnterCritical:ifLocked:
+    |      |  |                                                                                    8.3% {4ms} BlockClosure>>ensure:
+    |      |  |                                                                                      8.3% {4ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:byProcessingList:
+    |      |  |                                                                                        8.3% {4ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+    |      |  |                                                                                          8.3% {4ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+    |      |  |                                                                                            8.3% {4ms} Mutex>>critical:
+    |      |  |                                                                                              4.2% {2ms} ClySortedQueryResult(ClyQueryResult)>>protectAccessWhile:
+    |      |  |                                                                                                |4.2% {2ms} ClySortedQueryResult(ClyQueryResult)>>handleSystemChange:
+    |      |  |                                                                                                |  4.2% {2ms} ClyAllMethodGroups>>isResult:affectedBy:
+    |      |  |                                                                                                |    4.2% {2ms} ClyClassSideScope(ClyAbstractClassScope)>>includesMethodGroupsAffectedBy:
+    |      |  |                                                                                                |      4.2% {2ms} ClyClassSideScope(ClyAbstractClassScope)>>methodGroupProvidersDo:
+    |      |  |                                                                                                |        4.2% {2ms} ClyNavigationEnvironment>>pluginsDo:
+    |      |  |                                                                                                |          4.2% {2ms} OrderedCollection>>do:
+    |      |  |                                                                                                |            4.2% {2ms} ClyClassSideScope(ClyAbstractClassScope)>>methodGroupProvidersDo:
+    |      |  |                                                                                                |              4.2% {2ms} Array(SequenceableCollection)>>do:
+    |      |  |                                                                                                |                4.2% {2ms} ClyClassSideScope(ClyAbstractClassScope)>>includesMethodGroupsAffectedBy:
+    |      |  |                                                                                                |                  4.2% {2ms} ClyFailedTestGroupProvider(ClySingleMethodGroupProvider)>>providesGroupsAffectedBy:inScope:
+    |      |  |                                                                                                |                    4.2% {2ms} ClyFailedTestMethods(ClyMethodQuery)>>isResult:affectedBy:
+    |      |  |                                                                                                |                      4.2% {2ms} MetalinkChanged>>canAffectResultOfMethodQuery:
+    |      |  |                                                                                                |                        4.2% {2ms} IdentitySet(Collection)>>anySatisfy:
+    |      |  |                                                                                                |                          4.2% {2ms} IdentitySet(Set)>>do:
+    |      |  |                                                                                                |                            4.2% {2ms} IdentitySet(Collection)>>anySatisfy:
+    |      |  |                                                                                                |                              4.2% {2ms} MetalinkChanged>>canAffectResultOfMethodQuery:
+    |      |  |                                                                                                |                                4.2% {2ms} ClyFailedTestMethods(ClyMethodQuery)>>isAffectedByChangedMethod:
+    |      |  |                                                                                                |                                  4.2% {2ms} ClyFailedTestMethods>>selectsMethod:
+    |      |  |                                                                                              4.2% {2ms} ProcessorScheduler>>activeProcess
+    |      |8.3% {4ms} a subclass of C class(Behavior)>>compile:
+    |      |  8.3% {4ms} a subclass of C class(ClassDescription)>>compile:notifying:
+    |      |    8.3% {4ms} a subclass of C class(ClassDescription)>>compile:classified:notifying:
+    |      |      8.3% {4ms} a subclass of C class(ClassDescription)>>compile:classified:withStamp:notifying:
+    |      |        8.3% {4ms} a subclass of C class(ClassDescription)>>compile:classified:withStamp:notifying:logSource:
+    |      |          8.3% {4ms} a subclass of C class(ClassDescription)>>logMethodSource:forMethod:inCategory:withStamp:
+    |      |            8.3% {4ms} CompiledMethod>>putSource:class:category:withStamp:priorMethod:
+    |      |              8.3% {4ms} CompiledMethod>>putSource:withPreamble:
+    |      |                8.3% {4ms} SourceFileArray>>writeSource:preamble:onSuccess:onFail:
+    |      |                  8.3% {4ms} SourceFileArray>>flushChangesFile
+    |      |                    8.3% {4ms} SourceFileArray>>emptyReadStreamsQueue
+    |      |                      8.3% {4ms} SharedQueue>>flushAllSuchThat:
+    |      |                        8.3% {4ms} Monitor>>critical:
+    |      |                          8.3% {4ms} BlockClosure>>ensure:
+    |      |                            8.3% {4ms} Monitor>>critical:
+    |      |                              8.3% {4ms} SharedQueue>>flushAllSuchThat:
+    |      |                                8.3% {4ms} OrderedCollection>>reject:
+    |      |                                  8.3% {4ms} SourceFileArray>>emptyReadStreamsQueue
+    |      |                                    8.3% {4ms} SourceFileArray>>closeFileArray:
+    |      |                                      8.3% {4ms} Array(SequenceableCollection)>>reject:thenDo:
+    |      |                                        8.3% {4ms} SourceFileArray>>closeFileArray:
+    |      |                                          8.3% {4ms} SourceFile>>close
+    |      |                                            8.3% {4ms} ZnCharacterReadStream(ZnEncodedStream)>>close
+    |      |                                              8.3% {4ms} ZnBufferedReadStream>>close
+    |      |                                                8.3% {4ms} BinaryFileStream>>close
+    |      |                                                  8.3% {4ms} BinaryFileStream>>unregister
+    |      |                                                    8.3% {4ms} File class>>unregister:
+    |      |                                                      8.3% {4ms} WeakRegistry>>remove:ifAbsent:
+    |      |                                                        8.3% {4ms} WeakRegistry>>protected:
+    |      |                                                          8.3% {4ms} Semaphore>>critical:ifError:
+    |      |                                                            8.3% {4ms} Semaphore>>critical:
+    |      |                                                              8.3% {4ms} BlockClosure>>ensure:
+    |      |                                                                8.3% {4ms} Semaphore>>critical:
+    |      |                                                                  8.3% {4ms} Semaphore>>critical:ifError:
+    |      |                                                                    8.3% {4ms} BlockClosure>>ifError:
+    |      |                                                                      8.3% {4ms} BlockClosure>>on:do:
+    |      |                                                                        8.3% {4ms} WeakRegistry>>remove:ifAbsent:
+    |    12.5% {6ms} LUBMetalinkAdapter>>acquire:withLink:inObject:
+    |      12.5% {6ms} RBMethodNode(RBProgramNode)>>link:forObject:
+    |        12.5% {6ms} MetaLink>>linkToNode:forObject:
+    |          12.5% {6ms} MetaLinkInstaller>>install:onNode:forObject:
+    |            8.3% {4ms} RBMethodNode(RBProgramNode)>>link:
+    |              |4.2% {2ms} CompiledMethod>>installLink:
+    |              |  |4.2% {2ms} CompiledMethod>>invalidate
+    |              |  |  4.2% {2ms} ReflectiveMethod>>installReflectiveMethod
+    |              |  |    4.2% {2ms} ReflectiveMethod>>installMethod:
+    |              |  |      4.2% {2ms} MethodDictionary>>at:put:
+    |              |  |        4.2% {2ms} MethodDictionary(HashedCollection)>>fullCheck
+    |              |4.2% {2ms} ReflectiveMethod>>installLink:
+    |              |  4.2% {2ms} SystemAnnouncer>>announce:
+    |              |    4.2% {2ms} SystemAnnouncer(Announcer)>>announce:
+    |              |      4.2% {2ms} SubscriptionRegistry>>deliver:
+    |              |        4.2% {2ms} SubscriptionRegistry>>deliver:to:
+    |              |          4.2% {2ms} SubscriptionRegistry>>deliver:to:startingAt:
+    |            4.2% {2ms} MetaLinkInstaller>>astFromNode:forObject:inClass:
+    |              4.2% {2ms} MetaLinkInstaller>>copyNode:inClass:
+    |                4.2% {2ms} MetaLinkInstaller>>compileMethodNodeFor:in:
+    |                  4.2% {2ms} MetaLinkAnonymousClassBuilder>>compileMethodFrom:in:
+    |                    4.2% {2ms} a subclass of C class(Behavior)>>compile:
+    |                      4.2% {2ms} a subclass of C class(ClassDescription)>>compile:notifying:
+    |                        4.2% {2ms} a subclass of C class(ClassDescription)>>compile:classified:notifying:
+    |                          4.2% {2ms} a subclass of C class(ClassDescription)>>compile:classified:withStamp:notifying:
+    |                            4.2% {2ms} a subclass of C class(ClassDescription)>>compile:classified:withStamp:notifying:logSource:
+    |                              4.2% {2ms} OpalCompiler>>compile
+    |                                4.2% {2ms} BlockClosure>>on:do:
+    |                                  4.2% {2ms} OpalCompiler>>compile
+    |                                    4.2% {2ms} RBMethodNode>>generate:
+    |                                      4.2% {2ms} IRMethod>>compiledMethodWith:
+    |                                        4.2% {2ms} IRMethod>>generate:
+    |                                          4.2% {2ms} IRTranslatorV2>>compiledMethod
+    |                                            4.2% {2ms} IRBytecodeGenerator>>compiledMethodWith:
+    |                                              4.2% {2ms} IRBytecodeGenerator>>compiledMethodWith:header:literals:
+    |                                                4.2% {2ms} IRBytecodeGenerator>>bytecodes
+    |                                                  4.2% {2ms} OrderedCollection>>do:
+  4.2% {2ms} LUBAdaptation>>generateHooksForObject:
+    4.2% {2ms} Array(SequenceableCollection)>>collect:
+      4.2% {2ms} LUBAdaptation>>generateHooksForObject:
+        4.2% {2ms} Cadapt class(Behavior)>>lookupSelector:
+          4.2% {2ms} MethodDictionary>>at:ifPresent:
+            4.2% {2ms} BlockClosure>>cull:
+              4.2% {2ms} Cadapt class(Behavior)>>lookupSelector:
+
+**Leaves**
+8.3% {4ms} Metaclass(Behavior)>>emptyMethodDictionary
+8.3% {4ms} RBSequenceNode(RBProgramNode)>>comments:
+8.3% {4ms} WeakRegistry>>remove:ifAbsent:
+6.3% {3ms} ShiftAnonymousClassInstaller(Object)>>assert:
+6.3% {3ms} Mutex>>tryEnterCritical:ifLocked:
+4.2% {2ms} OrderedCollection>>makeRoomAtLast
+4.2% {2ms} BinaryFileStream class(AbstractBinaryFileStream class)>>handle:file:forWrite:
+4.2% {2ms} ClyFailedTestMethods>>selectsMethod:
+4.2% {2ms} OCASTSemanticAnalyzer>>visitSequenceNode:
+4.2% {2ms} Metaclass(Behavior)>>setFormat:
+4.2% {2ms} a subclass of C class(ProtoObject)>>identityHash
+4.2% {2ms} OrderedCollection>>do:
+4.2% {2ms} ProcessorScheduler>>activeProcess
+4.2% {2ms} MethodDictionary(HashedCollection)>>fullCheck
+4.2% {2ms} String class(SequenceableCollection class)>>streamContents:
+4.2% {2ms} OCASTTranslatorForEffect(RBProgramNodeVisitor)>>visitNode:
+4.2% {2ms} WeakIdentityKeyDictionary(WeakKeyDictionary)>>associationsDo:
+4.2% {2ms} Cadapt class(Behavior)>>lookupSelector:
+4.2% {2ms} a subclass of C class(ClassDescription)>>addAndClassifySelector:withMethod:inProtocol:
+4.2% {2ms} SubscriptionRegistry>>deliver:to:startingAt:
+
+**Memory**
+	old			+0 bytes
+	young		+2,630,952 bytes
+	used		+2,630,952 bytes
+	free		-2,630,952 bytes
+
+**GCs**
+	full			0 totalling 0ms (0.0% uptime)
+	incr		1 totalling 1ms (2.0% uptime), avg 1.0ms
+	tenures		0
+	root table	0 overflows
