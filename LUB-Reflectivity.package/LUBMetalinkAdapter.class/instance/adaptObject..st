@@ -20,11 +20,13 @@ adaptObject: target
 								hook: hook ] ].
 			metalinks := links asSet.
 			canvasClass := canvasObject class.
-			(adaptedObjects at: canvasClass ifAbsentPut: [ WeakOrderedCollection new ]) add: target.
+			(adaptedObjects at: canvasClass ifAbsentPut: [ WeakOrderedCollection new ])
+				add: target.
 			classSpecs
 				at: target class
 				put:
 					{canvasClass.
-					canvasObject} ].
+					canvasObject}.
+			adaptation mustRecompile: false ].
 	self bruteMigrationFor: target to: canvasClass.
 	^ target
