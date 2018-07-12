@@ -1,9 +1,10 @@
 adapting
 adaptObject: target
 	| canvasClass links canvasObject |
-	canvasClass := (classSpecs at: target class ifAbsent: [ nil ]) ifNotNil: [ :array | array first ].
-	canvasClass
-		ifNil: [ canvasObject := target class new.
+	canvasClass := (classSpecs at: target class ifAbsent: [ nil ])
+		ifNotNil: [ :array | array first ].
+	(canvasClass isNil or: [ adaptation mustRecompile ])
+		ifTrue: [ canvasObject := target class new.
 			links := Set new.
 			links := hooks
 				collect: [ :hook | 
